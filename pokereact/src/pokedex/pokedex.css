@@ -1,0 +1,15 @@
+.title-pokedex{
+    font-family: 'Kanit', sans-serif;
+}
+
+.loading{
+    font-family: 'Petrona', serif;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3vh auto;
+}

@@ -1,6 +1,8 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { SiPokemon } from "react-icons/si";
-import { GiPokecog } from "react-icons/gi";
+import Pokedex from './pokedex/Pokedex';
+import { Footer } from './footer/Footer';
 
 function App() {
   return (
@@ -8,10 +10,8 @@ function App() {
       <header className='App-header'>
         <SiPokemon className='App-logo'/>
       </header>
-
-      <footer className='App-footer'>
-        <GiPokecog className='App-ball'/>
-      </footer>  
+      <Pokedex/>
+      <Footer/>
     </div>
   );
 }
