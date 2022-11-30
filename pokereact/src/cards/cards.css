@@ -1,0 +1,41 @@
+.pokeimg{
+    height: 10vh;
+    width: 10vh;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.cards{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    margin: 4vh 1vh;
+    justify-content: space-around;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.card-item{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.poke-name{
+    font-family: 'IM Fell English', serif;
+}
+
+.poke-name::first-letter{
+    text-transform: uppercase;
+}
