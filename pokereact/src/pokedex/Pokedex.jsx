@@ -11,7 +11,7 @@ export default function Pokedex() {
     const state = useFetch(url); 
     const { loading, data } = state;
 
-    loading ? console.log('cargando'): console.log(data.results);
+    // loading ? console.log('cargando'): console.log(data.results);
 
     return (
         <div>

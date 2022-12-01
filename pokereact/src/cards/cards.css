@@ -39,3 +39,38 @@
 .poke-name::first-letter{
     text-transform: uppercase;
 }
+
+.poke-types{
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.type-name {
+    border: rgba(0, 0, 0, 0.473) solid 1px;
+    border-radius: 15px;
+    padding: 3px;
+    font-size: 1rem;
+    box-shadow: black 1px 1px 3px 1px;
+}
+
+.type-name::first-letter{
+    text-transform: uppercase;
+}
+
+/* Modal from PokeCard */
+
+.ModTitle::first-letter{
+    text-transform: uppercase;
+}
+
+.show-grid{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imagenModal{
+    height: 14vh;
+    width: 14vh;
+}
