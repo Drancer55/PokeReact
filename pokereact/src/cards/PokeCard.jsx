@@ -3,11 +3,12 @@ import { useFetch } from '../data/useFetch';
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 import './cards.css';
+import ModalCharacter from './ModalCharacter';
 
 export const PokeCard = ({ url }) => {
     const state = useFetch(url); 
     const { loading, data } = state;
-    console.log(data);
+
     return (
         <div>{
                 loading ?
@@ -15,11 +16,25 @@ export const PokeCard = ({ url }) => {
                     <Card>
                         <Card.Img variant="top" src={ data.sprites.other.home.front_default} alt="Pokémon" className='pokeimg'/>
                     <Card.Body>
-                        <Card.Title className="poke-name">{data.name}</Card.Title>
-                        <Card.Title>#{data.id}</Card.Title>
+                        <Card.Title>
+                            #{data.id}
+                            <h2 className="poke-name">{data.name}</h2>
+                        </Card.Title>
+                        <Card.Text>
+                            <h3 className='poke-types'>{data.types.map(type => {
+                                return (
+                                    <p className='type-name'>{type.type.name}</p>
+                                )
+                            })}</h3>
+                        </Card.Text>
                     </Card.Body>
                         <Card.Footer>
-                            <Button variant="outline-dark">Ver más...</Button>
+                        <ModalCharacter
+                            id={data.id}
+                            name={data.name}
+                            types={data.types.map(type => type.type.name)}
+                            src={data.sprites.other.dream_world.front_default}
+                        />
                         </Card.Footer>
                     </Card>
         }</div>

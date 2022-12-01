@@ -9,7 +9,7 @@ export const Cards = ({results}) => {
                     results.map(poke => {
                         return(
                         <div key={poke.name}>
-                            <PokeCard className='card-item' url={ poke.url } />
+                                <PokeCard className='card-item' url={poke.url} />
                         </div>
                     )})
                 }
